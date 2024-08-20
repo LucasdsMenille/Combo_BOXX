@@ -39,9 +39,9 @@
             this.lblQtde = new System.Windows.Forms.Label();
             this.cboLista = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnRemover = new System.Windows.Forms.Button();
-            this.btnOrdenar = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
+            this.btnOrdenar = new System.Windows.Forms.Button();
+            this.btnRemover = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtTexto
@@ -102,6 +102,7 @@
             this.btnExibir.TabIndex = 6;
             this.btnExibir.Text = "Exibir Dados do Combo";
             this.btnExibir.UseVisualStyleBackColor = true;
+            this.btnExibir.Click += new System.EventHandler(this.btnExibir_Click);
             // 
             // label4
             // 
@@ -139,26 +140,6 @@
             this.label6.Text = "Lista: ";
             this.label6.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btnRemover
-            // 
-            this.btnRemover.Location = new System.Drawing.Point(252, 271);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(147, 42);
-            this.btnRemover.TabIndex = 11;
-            this.btnRemover.Text = "Remover do Combo";
-            this.btnRemover.UseVisualStyleBackColor = true;
-            this.btnRemover.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnOrdenar
-            // 
-            this.btnOrdenar.Location = new System.Drawing.Point(337, 105);
-            this.btnOrdenar.Name = "btnOrdenar";
-            this.btnOrdenar.Size = new System.Drawing.Size(147, 42);
-            this.btnOrdenar.TabIndex = 12;
-            this.btnOrdenar.Text = "Ordenar o Combo";
-            this.btnOrdenar.UseVisualStyleBackColor = true;
-            this.btnOrdenar.Click += new System.EventHandler(this.button2_Click);
-            // 
             // btnInserir
             // 
             this.btnInserir.Location = new System.Drawing.Point(149, 105);
@@ -167,15 +148,36 @@
             this.btnInserir.TabIndex = 13;
             this.btnInserir.Text = "Inserir o Combo";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            // 
+            // btnOrdenar
+            // 
+            this.btnOrdenar.Location = new System.Drawing.Point(337, 105);
+            this.btnOrdenar.Name = "btnOrdenar";
+            this.btnOrdenar.Size = new System.Drawing.Size(147, 42);
+            this.btnOrdenar.TabIndex = 14;
+            this.btnOrdenar.Text = "Ordenar o Combo";
+            this.btnOrdenar.UseVisualStyleBackColor = true;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Location = new System.Drawing.Point(252, 264);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(147, 42);
+            this.btnRemover.TabIndex = 15;
+            this.btnRemover.Text = "Remover do Combo";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 572);
-            this.Controls.Add(this.btnInserir);
-            this.Controls.Add(this.btnOrdenar);
             this.Controls.Add(this.btnRemover);
+            this.Controls.Add(this.btnOrdenar);
+            this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.cboLista);
             this.Controls.Add(this.lblQtde);
             this.Controls.Add(this.label4);
@@ -189,6 +191,7 @@
             this.Controls.Add(this.txtTexto);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,9 +210,9 @@
         private System.Windows.Forms.Label lblQtde;
         private System.Windows.Forms.ComboBox cboLista;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnRemover;
-        private System.Windows.Forms.Button btnOrdenar;
         private System.Windows.Forms.Button btnInserir;
+        private System.Windows.Forms.Button btnOrdenar;
+        private System.Windows.Forms.Button btnRemover;
     }
 }
 
